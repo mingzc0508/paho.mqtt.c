@@ -1,0 +1,36 @@
+cc_library_shared {
+  name: "libpaho-mqtt3cs",
+  srcs: [
+    "src/MQTTProtocolClient.c",
+    "src/MQTTProtocolOut.c",
+    "src/MQTTPacket.c",
+    "src/MQTTPacketOut.c",
+    "src/MQTTPersistence.c",
+    "src/MQTTPersistenceDefault.c",
+    "src/MQTTClient.c",
+    "src/Tree.c",
+    "src/Heap.c",
+    "src/Clients.c",
+    "src/Thread.c",
+    "src/StackTrace.c",
+    "src/Socket.c",
+    "src/SocketBuffer.c",
+    "src/SSLSocket.c",
+    "src/Log.c",
+    "src/Messages.c",
+    "src/LinkedList.c",
+    "src/utf-8.c",
+  ],
+  cflags: [
+    "-Wno-unused-parameter",
+    "-Wno-sign-compare",
+    "-DOPENSSL",
+  ],
+  export_include_dirs: [
+    "src",
+  ],
+  shared_libs: [
+    "libssl",
+    "libcrypto",
+  ],
+}

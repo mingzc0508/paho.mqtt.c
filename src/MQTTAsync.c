@@ -3314,16 +3314,16 @@ MQTTAsync_nameValue* MQTTAsync_getVersionInfo(void)
 	libinfo[i++].value = SSLeay_version(SSLEAY_VERSION);
 
 	libinfo[i].name = "OpenSSL flags";
-	libinfo[i++].value = SSLeay_version(SSLEAY_CFLAGS);
+	libinfo[i++].value = SSLeay_version(0);
 
 	libinfo[i].name = "OpenSSL build timestamp";
-	libinfo[i++].value = SSLeay_version(SSLEAY_BUILT_ON);
+	libinfo[i++].value = SSLeay_version(0);
 
 	libinfo[i].name = "OpenSSL platform";
-	libinfo[i++].value = SSLeay_version(SSLEAY_PLATFORM);
+	libinfo[i++].value = SSLeay_version(0);
 
 	libinfo[i].name = "OpenSSL directory";
-	libinfo[i++].value = SSLeay_version(SSLEAY_DIR);
+	libinfo[i++].value = SSLeay_version(0);
 #endif
 	libinfo[i].name = NULL;
 	libinfo[i].value = NULL;
